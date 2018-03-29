@@ -1,0 +1,16 @@
+<h1>Movies <a href="/movies/edit">(+)</a></h1>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+      <a href="/movies/<%= movie.id %>">
+        <%= movie.title %>
+        <%= movie.genre %>
+        <%= movie.year %>
+        <%= movie.synopis %>
+        <%= movie.picture %>
+        <%= movie.add_to_favs %>
+      </a>
+    </li>
+  <% end %>
+</ul>

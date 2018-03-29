@@ -1,0 +1,9 @@
+<h1><%= @movie.title %></h1>
+<h3><%= @movie.synopis %></h3>
+<%= image_tag @movie.pster, class: 'movie-photo'%>
+
+<div>
+  <a href="/movies/<%= @movie.id %>/edit">Edit Movie</a>
+</div>
+<%= button_to "Delete Movie", "/movies/#{@movie.id}", :method => :delete %>
+  <% end %>
